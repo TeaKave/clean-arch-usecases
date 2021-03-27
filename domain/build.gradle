@@ -1,7 +1,11 @@
 plugins {
     id 'java-library'
     id 'kotlin'
+    id 'maven-publish'
+    id 'maven'
 }
+
+group = 'com.github.TeaKave'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_7
