@@ -85,11 +85,11 @@ open class ErrorResult(open var message: String? = null, open var throwable: Thr
  * Wrap a suspending [call] in try/catch. In case an exception is thrown, a [Result.Error] is
  * created based on the [errorMessage].
  */
-suspend fun <T : Any> safeCall(call: suspend () -> Result<T>, errorMessage: String): Result<T> {
+suspend fun <T : Any> safeCall(call: suspend () -> Result<T>, errorMessage: String, errorTag: String?): Result<T> {
     return try {
         call()
     } catch (e: Throwable) {
-        Result.Error(ErrorResult(errorMessage, e))
+        Result.Error(ErrorResult(errorMessage, e, errorTag))
     }
 }
 
