@@ -21,5 +21,5 @@ Add it in your root build.gradle at the end of repositories:
 
 
 	dependencies {
-	        implementation 'com.github.TeaKave:clean-arch-usecases:0.0.2'
+	        implementation 'com.github.TeaKave:clean-arch-usecases:0.0.3'
 	}
