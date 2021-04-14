@@ -79,7 +79,7 @@ sealed class Result<out T : Any> {
     }
 }
 
-open class ErrorResult(open var message: String? = null, open var throwable: Throwable? = null)
+open class ErrorResult(open var message: String? = null, open var throwable: Throwable? = null, open var errorTag: String? = null)
 
 /**
  * Wrap a suspending [call] in try/catch. In case an exception is thrown, a [Result.Error] is
